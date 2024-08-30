@@ -1,0 +1,107 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    background-color: #c2c2c2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 5px;
+    background-color: #4b5a71;
+    text-align: left;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #9348b1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.card, .card-two, .card-three, .card-four, .card-five, .card-six, .card-seven {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card {
+    height: 50px;
+}
+
+.card-two {
+    height: 200px;
+    background-color: #9348b1;
+}
+
+.card-three {
+    height: 690px;
+}
+
+.card-four {
+    height: 300px;
+}
+
+.card-five {
+    height: 200px;
+}
+
+.card-six {
+    height: 50px;
+}
+
+.card-seven {
+    height: 50px;
+}
+
+.small {
+    flex: 1;
+}
+
+.wide, .large {
+    flex: 3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .card {
+        height: 80px;
+    }
+
+    .large {
+        flex: 1;
+    }
+}
