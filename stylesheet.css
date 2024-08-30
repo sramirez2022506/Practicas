@@ -1,0 +1,75 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    background-color: #c2c2c2;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    padding: 5px;
+    background-color:#4b5a71;
+    text-align: left;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.row{ 
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.card{
+    background-color: white;
+    height: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card-two{
+    background-color: white;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.small{
+    flex: 1;
+}
+
+.wide{
+    flex: 3;
+
+}
+
+.large{
+    flex: 3;
+}
+
+/*Utilice media query para ajustar la pantalla y que fuera responsive, simplemente para evitar problemas con los cards*/
+
+@media (max-width: 768px){
+    .row {
+        flex-direction: column;
+    }
+    .card {
+        height: 80px;
+    }
+
+    .large {
+        flex: 1;
+    }
+}
+
+/* .section-one{
+width: 100%;
+}
+
+ */
