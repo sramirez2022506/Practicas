@@ -1,0 +1,49 @@
+.app_section {
+    background-image: url(../images/app-bg.jpg);
+    background-size: 100% 86%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    background-position: bottom;
+  
+    .row {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  
+    .img-box {
+      img {
+        width: 100%;
+      }
+    }
+  
+    .detail-box {
+      padding-top: 60px;
+  
+      h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 35px;
+  
+        span {
+          font-size: 1.5em;
+        }
+      }
+  
+      p {
+        color: #ffffff;
+      }
+  
+      .btn-box {
+        margin-top: 35px;
+  
+        a {
+          margin-right: 10px;
+  
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
