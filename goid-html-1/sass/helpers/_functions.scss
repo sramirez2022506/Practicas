@@ -1,0 +1,12 @@
+@function link-styles($padding, $background-color, $color, $border, $hover-background-color, $hover-color) {
+    @return (
+      padding: $padding,
+      background-color: $background-color,
+      color: $color,
+      border: $border,
+      hover-background-color: $hover-background-color,
+      hover-color: $hover-color
+    );
+  }
+  //El hover me generaba error asi que lo aplique de forma distinta
+  

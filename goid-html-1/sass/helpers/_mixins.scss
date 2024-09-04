@@ -1,0 +1,114 @@
+@import "./../helpers/functions";
+
+@mixin footer-section($padding: 20px, $bg-color: #e77474, $text-color: #ffffff, $h4-color: #e77474) {
+    padding: $padding;
+    background-color: $bg-color;
+    
+    .social_container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 25px 0;
+  
+      h4 {
+        color: $h4-color;
+        font-weight: bold;
+      }
+  
+      .social_box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+  
+        a {
+          margin: 0 10px;
+  
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  
+    p {
+      margin: 0;
+      text-align: center;
+      color: $text-color;
+    }
+  
+    a {
+      color: $text-color;
+    }
+  }
+
+@mixin button-styles($bg-color: #fc5d35, $text-color: #f7f7f7, $padding: 5px 15px, $font-size: 14px, $text-transform: uppercase, $border-radius: 10px) {
+    display: inline-block;
+    padding: $padding;
+    background-color: $bg-color;
+    color: $text-color;
+    font-size: $font-size;
+    border-radius: $border-radius;
+    text-transform: $text-transform;
+    
+    &:focus {
+      outline: none !important;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+//El mixin va de la mano con la funcion
+@mixin apply-link-styles($styles) {
+    padding: map-get($styles, padding);
+    background-color: map-get($styles, background-color);
+    color: map-get($styles, color);
+    border: map-get($styles, border);
+  
+    &:hover {
+      background-color: map-get($styles, hover-background-color);
+      color: map-get($styles, hover-color);
+    }
+  }
+  
+  @mixin about-section-styles {
+    .row {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  
+    .detail-box {
+      padding-left: 10%;
+  
+      p {
+        margin-top: 20px;
+      }
+  //Tiene que ir en orden o si no genera un error
+      a {
+        @include apply-link-styles(
+          link-styles(
+            8px 35px,               
+            #1958b6,                
+            #ffffff,               
+            1px solid #10af7a,      
+            transparent,            
+            #262626                 
+          )
+        );
+      }
+    }
+  
+    .img-box {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
